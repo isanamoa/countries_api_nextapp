@@ -21,6 +21,8 @@ const Details = () => {
     const countryDetails = Data.filter(value => {
         return value.name === countryName;
     });
+    console.log(countryDetails);
+
     grid grid-cols-2 sm:grid-cols-3 md:grid
     */
     useEffect(()=>{
@@ -29,7 +31,6 @@ const Details = () => {
         fetchDisplayCountryData(countryName);
     },[])
 
-    console.log(countryDetails);
 
     function convertAlphaCodeToName(AlphaCode) {
         const country = Data.filter((value) => (

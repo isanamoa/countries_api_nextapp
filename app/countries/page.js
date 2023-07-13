@@ -1,10 +1,10 @@
 'use client';
-import  { useContext } from "react";
+//import  { useContext } from "react";
 
 import CountryCard from "@/components/CountryCard";
-import Loading from "@/components/Loading";
+//import Loading from "@/components/Loading";
 
-import { countryContext } from "../page";
+//import { countryContext } from "../page";
 
 
 const HomePage = () => {
@@ -20,4 +20,4 @@ const HomePage = () => {
   )
 }
 
-export default HomePage
+export default HomePage;

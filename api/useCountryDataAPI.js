@@ -165,6 +165,7 @@ const useCountryDataAPI = () => {
             }, 10000);
         }
     }
+
     
     return { isLoading, isError, isNotice, countryData, countryDetails, 
             fetchCountryData, fetchSearchedCountryData, 

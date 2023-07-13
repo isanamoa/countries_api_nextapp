@@ -3,9 +3,9 @@ import  { useEffect, useContext } from "react";
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
-import { countryContext } from "@/app/page";
+//import { countryContext } from "@/app/page";
 import Loading from "./Loading";
-import { darkModeContext } from "@/app/layout";
+import { darkModeContext, countryContext } from "@/app/layout";
 
 const CountryCard = ({}) => {
     const router = useRouter();
@@ -15,6 +15,7 @@ const CountryCard = ({}) => {
     
     useEffect(()=> {
       fetchCountryData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[]);
 
     //console.log(countryData && countryData[0].name);

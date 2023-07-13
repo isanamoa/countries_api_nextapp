@@ -1,12 +1,12 @@
 import { useContext } from "react";
 import FilterOptions from "./FilterOptions"
 import SearchBar from "./SearchBar"
-import { countryContext } from "@/app/page";
+import {  countryContext } from "@/app/layout";
 
 const Nav = () => {
   const countryDataAPI = useContext(countryContext);
   const { isNotice, isError } = countryDataAPI;
-  console.log(isNotice, isError)
+  //console.log(isNotice, isError)
   return (
     <nav className="flex flex-col justify-between items-start md:flex-row md:items-center">
       <SearchBar />

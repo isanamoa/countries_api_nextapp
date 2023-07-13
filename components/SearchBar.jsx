@@ -1,8 +1,10 @@
+'use client';
 import {MdSearch} from "react-icons/md";
 import { useState, useContext } from "react";
 
-import { countryContext } from "@/app/page";
-import { darkModeContext } from "@/app/layout";
+//import { countryContext } from "@/app/page";
+import { darkModeContext, countryContext } from "@/app/layout";
+
 const SearchBar = () => {
     const modeContext = useContext(darkModeContext);
 

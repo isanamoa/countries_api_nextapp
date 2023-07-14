@@ -55,7 +55,7 @@ const useCountryDataAPI = () => {
         }
     };
 
-    useEffect(()=>{fetchCountryData()},[]);
+    //useEffect(()=>{fetchCountryData()},[]);
 
     const fetchSearchedCountryData = async (country) => {
         try {

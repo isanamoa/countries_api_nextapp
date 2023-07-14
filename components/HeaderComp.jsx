@@ -1,3 +1,4 @@
+'use client';
 import { useContext } from 'react';
 import { MdDarkMode, MdLightMode } from 'react-icons/md';
 import { darkModeContext } from '@/app/layout';

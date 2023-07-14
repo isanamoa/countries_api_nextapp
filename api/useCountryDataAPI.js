@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Data from '@/utils/data.json' assert { type: 'json'};
-import { data } from "autoprefixer";
+import Data from '@/utils/data.json';
 
 const useCountryDataAPI = () => {
      // Presenting data
@@ -13,7 +12,6 @@ const useCountryDataAPI = () => {
     // Checking error stage
     const [isError, setIsError] = useState(null);
     const [isNotice, setIsNotice] = useState(null);
-
 
     const fetchCountryData = async () => {
         try {
@@ -53,9 +51,12 @@ const useCountryDataAPI = () => {
             }
             setTimeout(() => {
                 setIsNotice(prev => !prev)
-            }, 10000);
+            }, 7000);
         }
-    }
+    };
+
+    useEffect(()=>{fetchCountryData()},[]);
+
     const fetchSearchedCountryData = async (country) => {
         try {
             setIsLoading(true);
@@ -89,9 +90,12 @@ const useCountryDataAPI = () => {
             }
             setTimeout(() => {
                 setIsNotice(prev => !prev)
-            }, 10000);
+            }, 7000);
         }
-    }
+    };
+
+    //useEffect(()=>{fetchSearchedCountryData()}, []);
+
     const fetchFilterCountrByRegionData = async (region) => {
         try {
             setIsLoading(true);
@@ -125,9 +129,11 @@ const useCountryDataAPI = () => {
             }
             setTimeout(() => {
                 setIsNotice(prev => !prev)
-            }, 10000);
+            }, 7000);
         }
-    }
+    };
+
+    //useEffect(()=>{fetchFilterCountrByRegionData()}, []);
 
     const fetchDisplayCountryData = async (country) => {
         try {
@@ -162,11 +168,12 @@ const useCountryDataAPI = () => {
             }
             setTimeout(() => {
                 setIsNotice(prev => !prev)
-            }, 10000);
-        }
+            }, 7000);
+        };
     }
 
-    
+    //useEffect(()=>{fetchDisplayCountryData()}, []);
+
     return { isLoading, isError, isNotice, countryData, countryDetails, 
             fetchCountryData, fetchSearchedCountryData, 
             fetchFilterCountrByRegionData, fetchDisplayCountryData }

@@ -1,7 +1,6 @@
 'use client';
 import { useState, useContext } from "react";
 import {MdArrowDropDown} from "react-icons/md";
-//import { countryContext } from "@/app/page";
 import { darkModeContext, countryContext } from "@/app/layout";
 
 const FilterOptions = () => {
